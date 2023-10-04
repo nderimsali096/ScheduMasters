@@ -57,14 +57,16 @@ To use this Scheduling Service, follow these steps:
    }
    ```
 
-3. **Get The most optimized meeting slot**:
+   1. **Get The most optimized meeting slot**:
 
-   Send a POST request to `/api/meeting/find-optimal-slot` with a JSON body containing the following information:
+      Send a POST request to `/api/meeting/find-optimal-slot` with a JSON body containing the following information:
 
-   ```json
-   {
-      "Adrian": ["Monday 14:00-16:00", "Tuesday 09:00-11:00"],
-      "Johanna": ["Monday 15:00-17:00", "Wednesday 10:00-12:00"],
-      "Sebastian": ["Tuesday 09:00-11:00", "Wednesday 11:00-13:00"]
-   }
+      ```json
+      {
+          "availability": {
+             "Adrian": ["Monday 14:00-16:00", "Tuesday 09:00-11:00"],
+             "Johanna": ["Monday 15:00-17:00", "Wednesday 10:00-12:00"],
+             "Sebastian": ["Tuesday 09:00-11:00", "Wednesday 11:00-13:00"]
+          }
+      }
    ```
